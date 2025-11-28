@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+<h2>Cadastre o novo Professor:</h2>
+
+{{ wtf.quick_form(form) }}
+
+<h2>Relação de professores cadastrados</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Professor</th>
+            <th>Disciplina</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in professores %}
+        <tr>
+            <td>{{ p.nome }}</td>
+            <td>{{ p.disciplina }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>A data e hora local é {{ moment(current_time).format('LLL') }}.</p>
+{% endblock %}
