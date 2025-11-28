@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>Avaliação semestral</h1>
+
+<p>Aluno: Samuel Lucena Santos</p>
+<p>Prontuário: PT3031756</p>
+
+<p>A data e hora local é {{ moment(current_time).format('LLL') }}.</p>
+{% endblock %}
