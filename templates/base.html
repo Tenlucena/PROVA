@@ -2,6 +2,15 @@
 
 {% block title %}Avaliação semestral{% endblock %}
 
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+    <script>
+        moment.locale("pt-br");
+    </script>
+{% endblock %}
+
+
 {% block navbar %}
 <nav class="navbar navbar-inverse">
     <div class="container">
